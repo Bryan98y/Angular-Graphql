@@ -16,15 +16,13 @@ export const GET_MESSAGES = gql`
 export const ADD_MESSAGE = gql`
   mutation AddMessage($name: String!, $email: String!, $age: String!,$address: String!,$phone: String!) {
     create(name: $name, email: $email, age: $age, address: $address, phone: $phone) {
-
       _id
-
     }
   }
 `;
 
 export const DELETE_MESSAGE = gql`
-  mutation deleteMessage($id: String!) {
+  mutation DelteMessage($id: String!) {
     delete(id: $id) {
       _id
     }
