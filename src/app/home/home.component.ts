@@ -60,11 +60,11 @@ export class HomeComponent implements OnInit {
       () => alert('los datos enviados no son los correctos');
   }
   deleteMessage(idMessage: string): void {
-    const dataSend = { id: idMessage };
+    const dataSend = {id: idMessage};
     this.apollo
       .mutate({
         mutation: DELETE_MESSAGE,
-        variables: dataSend,
+        variables: dataSend
       })
       .subscribe(
         ({ data }) => {

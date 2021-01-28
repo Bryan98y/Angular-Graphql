@@ -22,7 +22,7 @@ export const ADD_MESSAGE = gql`
 `;
 
 export const DELETE_MESSAGE = gql`
-  mutation DelteMessage($id: String!) {
+  mutation DeleteMessage($id:String!) {
     delete(id: $id) {
       _id
     }
